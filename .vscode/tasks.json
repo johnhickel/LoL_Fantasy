@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start LoL Fantasy (PHP)",
+            "type": "shell",
+            "command": "php",
+            "args": [
+                "-S",
+                "127.0.0.1:8000",
+                "-t",
+                "."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Development Server \\(http://127\\.0\\.0\\.1:8000\\) started",
+                    "endsPattern": "Development Server \\(http://127\\.0\\.0\\.1:8000\\) stopped"
+                }
+            }
+        }
+    ]
+}
